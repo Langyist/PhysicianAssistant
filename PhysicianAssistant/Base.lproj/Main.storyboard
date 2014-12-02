@@ -89,7 +89,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="SelectCityButton:" destination="bos-KU-WoW" eventType="touchUpInside" id="eOW-Bc-TcI"/>
+                                <action selector="selectCity:" destination="bos-KU-WoW" eventType="touchUpInside" id="MRn-jU-f6A"/>
                             </connections>
                         </button>
                         <barButtonItem key="rightBarButtonItem" title="定位" id="yu9-mC-b3l"/>
@@ -101,7 +101,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xAn-ZD-DFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="259.5" y="190"/>
+            <point key="canvasLocation" x="271.5" y="190"/>
         </scene>
         <!--注册-->
         <scene sceneID="oMc-Uw-bUy">
@@ -191,7 +191,7 @@
                                     <constraint firstAttribute="height" constant="26" id="H0v-Qt-vGW"/>
                                     <constraint firstAttribute="width" constant="196" id="gSA-cE-nn6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">

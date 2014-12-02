@@ -8,7 +8,9 @@
 
 #import "LYHospitalList.h"
 
-@interface LYHospitalList ()
+@interface LYHospitalList () {
+    UISearchBar *searchBar;
+}
 
 @end
 
@@ -16,6 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 50)];
+    self.tableView.tableHeaderView = searchBar;
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
 }
 - (IBAction)SelectCityButton:(id)sender {
@@ -43,6 +49,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self performSegueWithIdentifier:@"GoLoginVC" sender:self];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    if (scrollView == self.tableView) {
+        [searchBar resignFirstResponder];
+    }
 }
 
 @end

@@ -25,6 +25,14 @@
     self.passwordText.secureTextEntry = YES;
     self.passwordText.clearsOnBeginEditing = YES;
     
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    imageView.image = [UIImage imageNamed:@"定位"];
+    self.userText.leftView = imageView;
+    self.userText.leftViewMode = UITextFieldViewModeAlways;
+    
+    self.passwordText.leftView = imageView;
+    self.passwordText.leftViewMode = UITextFieldViewModeAlways;
+    
     self.loginButton.layer.cornerRadius = 5.0f;
     
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboard)];
@@ -59,57 +67,5 @@
     }
     return YES;
 }
-
-////开始编辑输入框
-//- (void)textFieldDidBeginEditing:(UITextField *)textField
-//{
-//    if (textField==self.userText) {
-//        NSTimeInterval animationDuration = 0.30f;
-//        CGRect frame = self.view.frame;
-//        frame.origin.y -=60;
-//        //frame.size.height +=60;
-//        self.view.frame = frame;
-//        [UIView beginAnimations:@"ResizeView" context:nil];
-//        [UIView setAnimationDuration:animationDuration];
-//        [UIView commitAnimations];
-//    }else if (textField==self.passwordText)
-//    {
-//        NSTimeInterval animationDuration = 0.30f;
-//        CGRect frame = self.view.frame;
-//        frame.origin.y -=100;
-//        //frame.size.height +=100;
-//        self.view.frame = frame;
-//        [UIView beginAnimations:@"ResizeView" context:nil];
-//        [UIView setAnimationDuration:animationDuration];
-//        [UIView commitAnimations];
-//    }
-//}
-////结束编辑输入框
-//- (void)textFieldDidEndEditing:(UITextField *)textField
-//{
-//    if (textField==self.userText)
-//    {
-//        NSTimeInterval animationDuration = 0.30f;
-//        CGRect frame = self.view.frame;
-//        frame.origin.y +=60;
-//        //frame.size.height -=60;
-//        self.view.frame = frame;
-//        [UIView beginAnimations:@"ResizeView" context:nil];
-//        [UIView setAnimationDuration:animationDuration];
-//        self.view.frame = frame;
-//        [UIView commitAnimations];
-//    }else if (textField == self.passwordText)
-//    {
-//        NSTimeInterval animationDuration = 0.30f;
-//        CGRect frame = self.view.frame;
-//        frame.origin.y +=100;
-//        //frame.size.height -=100;
-//        self.view.frame = frame;
-//        [UIView beginAnimations:@"ResizeView" context:nil];
-//        [UIView setAnimationDuration:animationDuration];
-//        self.view.frame = frame;
-//        [UIView commitAnimations];
-//    }
-//}
 
 @end

@@ -8,10 +8,15 @@
 
 #import "LYPasswordVC.h"
 
-@interface LYPasswordVC () <UITextFieldDelegate>
+@interface LYPasswordVC () <UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate> {
+    
+    NSArray *pickerArray;
+}
 @property (weak, nonatomic) IBOutlet UITextField *passwordText;
 @property (weak, nonatomic) IBOutlet UITextField *thirdText;
 @property (weak, nonatomic) IBOutlet UIButton *signButton;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
+@property (weak, nonatomic) IBOutlet UILabel *pickerViewLabel;
 
 @end
 
@@ -28,14 +33,26 @@
     self.thirdText.secureTextEntry = YES;
     self.thirdText.clearsOnBeginEditing = YES;
     
+    self.pickerView.delegate = self;
+    
+    pickerArray = [NSArray arrayWithObjects:@"科室",@"外科",@"内科",@"医学科",@"脑壳",@"儿科", nil];
+    
+    self.pickerView.hidden = YES;
+    
     UITapGestureRecognizer *Gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboard)];
     [self.view addGestureRecognizer:Gesture];
+
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 - (void)closeKeyboard {
     
     [self.passwordText resignFirstResponder];
     [self.thirdText resignFirstResponder];
+    self.pickerView.hidden = YES;
 }
 //完成注册Button
 - (IBAction)signButton:(id)sender {
@@ -49,12 +66,29 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (textField == self.passwordText) {
+        [self.passwordText resignFirstResponder];
         [self.thirdText becomeFirstResponder];
     }else if (textField == self.thirdText){
         
         [self.thirdText resignFirstResponder];
     }
     return YES;
+}
+
+#pragma mark UIPickerView dataSource
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    
+    return [pickerArray count];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    
+    
 }
 
 @end

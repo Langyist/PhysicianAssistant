@@ -1,7 +1,7 @@
 //
 //  LYGetcodeVC.m
 //  PhysicianAssistant
-//
+//  获取验证码
 //  Created by langyi on 14/12/2.
 //  Copyright (c) 2014年 wangliang. All rights reserved.
 //

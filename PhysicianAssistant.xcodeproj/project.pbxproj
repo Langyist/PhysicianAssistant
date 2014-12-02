@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4C46422F538A388E7094271D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A494930512A1F70F165B0D08 /* libPods.a */; };
+		AD8D56C11A2DAEDB00D81DBA /* LYHospitalList.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8D56C01A2DAEDB00D81DBA /* LYHospitalList.m */; };
+		AD8D56C41A2DAF1E00D81DBA /* LYLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8D56C31A2DAF1E00D81DBA /* LYLoginVC.m */; };
+		AD8D56C71A2DAFCB00D81DBA /* SelectCity.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8D56C61A2DAFCB00D81DBA /* SelectCity.m */; };
 		AD943BA61A2DA97600F32359 /* 定位.png in Resources */ = {isa = PBXBuildFile; fileRef = AD943B9B1A2DA97600F32359 /* 定位.png */; };
-		AD943BA71A2DA97600F32359 /* LYLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD943B9E1A2DA97600F32359 /* LYLoginVC.m */; };
 		AD943BA81A2DA97600F32359 /* LYGetcodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD943BA11A2DA97600F32359 /* LYGetcodeVC.m */; };
 		AD943BA91A2DA97600F32359 /* LYPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD943BA31A2DA97600F32359 /* LYPasswordVC.m */; };
 		AD943BAA1A2DA97600F32359 /* LYSignupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD943BA51A2DA97600F32359 /* LYSignupVC.m */; };
-		AD943BAD1A2DAA0800F32359 /* LYHospitalList.m in Sources */ = {isa = PBXBuildFile; fileRef = AD943BAC1A2DAA0800F32359 /* LYHospitalList.m */; };
 		EF2F1B201A2C8B190048997F /* StoreOnlineNetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2F1B1F1A2C8B190048997F /* StoreOnlineNetworkEngine.m */; };
 		EF5EC54B1A2C7F3200C9D980 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5EC54A1A2C7F3200C9D980 /* main.m */; };
 		EF5EC54E1A2C7F3200C9D980 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5EC54D1A2C7F3200C9D980 /* AppDelegate.m */; };
@@ -38,17 +39,19 @@
 		92D0569C1EE1FF78619562C2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9F0BADB998D35336EB6E7DD7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A494930512A1F70F165B0D08 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD8D56BF1A2DAEDB00D81DBA /* LYHospitalList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYHospitalList.h; sourceTree = "<group>"; };
+		AD8D56C01A2DAEDB00D81DBA /* LYHospitalList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYHospitalList.m; sourceTree = "<group>"; };
+		AD8D56C21A2DAF1E00D81DBA /* LYLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLoginVC.h; sourceTree = "<group>"; };
+		AD8D56C31A2DAF1E00D81DBA /* LYLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLoginVC.m; sourceTree = "<group>"; };
+		AD8D56C51A2DAFCB00D81DBA /* SelectCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCity.h; sourceTree = "<group>"; };
+		AD8D56C61A2DAFCB00D81DBA /* SelectCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCity.m; sourceTree = "<group>"; };
 		AD943B9B1A2DA97600F32359 /* 定位.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "定位.png"; sourceTree = "<group>"; };
-		AD943B9D1A2DA97600F32359 /* LYLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLoginVC.h; sourceTree = "<group>"; };
-		AD943B9E1A2DA97600F32359 /* LYLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLoginVC.m; sourceTree = "<group>"; };
 		AD943BA01A2DA97600F32359 /* LYGetcodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYGetcodeVC.h; sourceTree = "<group>"; };
 		AD943BA11A2DA97600F32359 /* LYGetcodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYGetcodeVC.m; sourceTree = "<group>"; };
 		AD943BA21A2DA97600F32359 /* LYPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPasswordVC.h; sourceTree = "<group>"; };
 		AD943BA31A2DA97600F32359 /* LYPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPasswordVC.m; sourceTree = "<group>"; };
 		AD943BA41A2DA97600F32359 /* LYSignupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSignupVC.h; sourceTree = "<group>"; };
 		AD943BA51A2DA97600F32359 /* LYSignupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSignupVC.m; sourceTree = "<group>"; };
-		AD943BAB1A2DAA0800F32359 /* LYHospitalList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LYHospitalList.h; path = PhysicianAssistant/Hospital/LYHospitalList.h; sourceTree = SOURCE_ROOT; };
-		AD943BAC1A2DAA0800F32359 /* LYHospitalList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LYHospitalList.m; path = PhysicianAssistant/Hospital/LYHospitalList.m; sourceTree = SOURCE_ROOT; };
 		EF2F1B1E1A2C8B190048997F /* StoreOnlineNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreOnlineNetworkEngine.h; sourceTree = "<group>"; };
 		EF2F1B1F1A2C8B190048997F /* StoreOnlineNetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreOnlineNetworkEngine.m; sourceTree = "<group>"; };
 		EF5EC5451A2C7F3200C9D980 /* PhysicianAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhysicianAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,15 +105,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		AD943B991A2DA97600F32359 /* Hospital */ = {
-			isa = PBXGroup;
-			children = (
-				AD943BAB1A2DAA0800F32359 /* LYHospitalList.h */,
-				AD943BAC1A2DAA0800F32359 /* LYHospitalList.m */,
-			);
-			path = Hospital;
-			sourceTree = "<group>";
-		};
 		AD943B9A1A2DA97600F32359 /* image */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,18 +113,11 @@
 			path = image;
 			sourceTree = "<group>";
 		};
-		AD943B9C1A2DA97600F32359 /* Login */ = {
+		AD943B9F1A2DA97600F32359 /* login */ = {
 			isa = PBXGroup;
 			children = (
-				AD943B9D1A2DA97600F32359 /* LYLoginVC.h */,
-				AD943B9E1A2DA97600F32359 /* LYLoginVC.m */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		AD943B9F1A2DA97600F32359 /* Sign Up */ = {
-			isa = PBXGroup;
-			children = (
+				AD8D56C21A2DAF1E00D81DBA /* LYLoginVC.h */,
+				AD8D56C31A2DAF1E00D81DBA /* LYLoginVC.m */,
 				AD943BA01A2DA97600F32359 /* LYGetcodeVC.h */,
 				AD943BA11A2DA97600F32359 /* LYGetcodeVC.m */,
 				AD943BA21A2DA97600F32359 /* LYPasswordVC.h */,
@@ -138,6 +125,7 @@
 				AD943BA41A2DA97600F32359 /* LYSignupVC.h */,
 				AD943BA51A2DA97600F32359 /* LYSignupVC.m */,
 			);
+			name = login;
 			path = "Sign Up";
 			sourceTree = "<group>";
 		};
@@ -173,15 +161,17 @@
 		EF5EC5471A2C7F3200C9D980 /* PhysicianAssistant */ = {
 			isa = PBXGroup;
 			children = (
-				AD943B991A2DA97600F32359 /* Hospital */,
 				AD943B9A1A2DA97600F32359 /* image */,
-				AD943B9C1A2DA97600F32359 /* Login */,
-				AD943B9F1A2DA97600F32359 /* Sign Up */,
+				AD943B9F1A2DA97600F32359 /* login */,
 				EF2F1B1D1A2C8B190048997F /* DataEngine */,
 				EF5EC54C1A2C7F3200C9D980 /* AppDelegate.h */,
 				EF5EC54D1A2C7F3200C9D980 /* AppDelegate.m */,
 				EF5EC54F1A2C7F3200C9D980 /* ViewController.h */,
 				EF5EC5501A2C7F3200C9D980 /* ViewController.m */,
+				AD8D56BF1A2DAEDB00D81DBA /* LYHospitalList.h */,
+				AD8D56C01A2DAEDB00D81DBA /* LYHospitalList.m */,
+				AD8D56C51A2DAFCB00D81DBA /* SelectCity.h */,
+				AD8D56C61A2DAFCB00D81DBA /* SelectCity.m */,
 				EF5EC5521A2C7F3300C9D980 /* Main.storyboard */,
 				EF5EC5551A2C7F3300C9D980 /* Images.xcassets */,
 				EF5EC5571A2C7F3300C9D980 /* LaunchScreen.xib */,
@@ -352,15 +342,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD943BA71A2DA97600F32359 /* LYLoginVC.m in Sources */,
 				EF5EC5511A2C7F3200C9D980 /* ViewController.m in Sources */,
 				AD943BA91A2DA97600F32359 /* LYPasswordVC.m in Sources */,
 				AD943BAA1A2DA97600F32359 /* LYSignupVC.m in Sources */,
 				EF5EC54E1A2C7F3200C9D980 /* AppDelegate.m in Sources */,
+				AD8D56C41A2DAF1E00D81DBA /* LYLoginVC.m in Sources */,
 				AD943BA81A2DA97600F32359 /* LYGetcodeVC.m in Sources */,
+				AD8D56C71A2DAFCB00D81DBA /* SelectCity.m in Sources */,
 				EF5EC54B1A2C7F3200C9D980 /* main.m in Sources */,
 				EF2F1B201A2C8B190048997F /* StoreOnlineNetworkEngine.m in Sources */,
-				AD943BAD1A2DAA0800F32359 /* LYHospitalList.m in Sources */,
+				AD8D56C11A2DAEDB00D81DBA /* LYHospitalList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6A2DD1F1-8360-4D7B-83E0-C4FD95225CB3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PhysicianAssistant</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B2526FF13B92B2701ADF04481DF6047D1937062B</key>
+		<string>https://github.com/Langyist/PhysicianAssistant.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PhysicianAssistant.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B2526FF13B92B2701ADF04481DF6047D1937062B</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Langyist/PhysicianAssistant.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B2526FF13B92B2701ADF04481DF6047D1937062B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B2526FF13B92B2701ADF04481DF6047D1937062B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PhysicianAssistant</string>
+		</dict>
+	</array>
+</dict>
+</plist>

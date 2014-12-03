@@ -22,7 +22,6 @@
     searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 50)];
     self.tableView.tableHeaderView = searchBar;
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    
 }
 - (IBAction)SelectCityButton:(id)sender {
     [self performSegueWithIdentifier:@"GoselectCity" sender:self];
@@ -58,5 +57,4 @@
         [searchBar resignFirstResponder];
     }
 }
-
 @end

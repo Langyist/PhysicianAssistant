@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface SelectCity : UITableViewController
+{
+    NSMutableArray * _Cities;
+
+}
 
 @end

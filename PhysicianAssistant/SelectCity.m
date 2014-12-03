@@ -7,45 +7,71 @@
 //
 
 #import "SelectCity.h"
+#import "StoreOnlineNetworkEngine.h"
 
-@interface SelectCity ()
-
+@interface SelectCity (){
+    
+    NSDictionary * _Section;
+    NSMutableArray * _CellList;
+    NSDictionary * _CellInfor;
+    
+}
 @end
 
 @implementation SelectCity
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self GetData];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
-    return 1;
+    return _Cities.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return 3;
+    _Section =[_Cities objectAtIndex:section];
+    _CellList = [_Section objectForKey:@"Items"];
+    return _CellList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"selectCityCell" forIndexPath:indexPath];
-    
-    
+    _Section =[_Cities objectAtIndex:indexPath.section];
+    _CellList = [_Section objectForKey:@"Items"];
+    _CellInfor = [_CellList objectAtIndex:indexPath.row];
+    cell.textLabel.text =[_CellInfor objectForKey:@"Name"];
     return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    
-    return @"A";
+    _Section =[_Cities objectAtIndex:section];
+    return [_Section objectForKey:@"CityPy"];
 }
 
+-(void)GetData{
+    NSDictionary *dic = @{@"act" :@"citylist"};
+    [[StoreOnlineNetworkEngine shareInstance] startNetWorkWithPath:@"hospital/hospital.ashx"
+                                                            params:dic
+                                                            repeat:YES
+                                                             isGet:YES
+                                                       resultBlock:^(BOOL bValidJSON, NSString *errorMsg, id result) {
+                                                           NSLog(@"%@",result);
+                                                           if(!bValidJSON)
+                                                           {
+                                                               UIAlertView * mslaView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"" delegate:errorMsg cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                                                               [mslaView show];
+                                                           }else
+                                                           {
+                                                               _Cities =result;
+                                                               [self.tableView reloadData];
+                                                           }}];
+}
 @end

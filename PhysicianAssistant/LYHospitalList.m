@@ -7,9 +7,12 @@
 //
 
 #import "LYHospitalList.h"
+#import "StoreOnlineNetworkEngine.h"
 
 @interface LYHospitalList () {
     UISearchBar *searchBar;
+    NSMutableArray* _HospitalList;
+    NSDictionary* _HospitalDic;
 }
 
 @end
@@ -24,9 +27,11 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     UIView *view = [[UIView alloc] init];
-    view.backgroundColor = [UIColor whiteColor];
     self.tableView.tableFooterView = view;
+    
     self.tableView.backgroundColor = [UIColor grayColor];
+    
+    [self GetData];
 }
 - (IBAction)SelectCityButton:(id)sender {
     [self performSegueWithIdentifier:@"GoselectCity" sender:self];
@@ -40,13 +45,23 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return 5;
+    return _HospitalList.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"hospitalCell" forIndexPath:indexPath];
+    
+    _HospitalDic = [_HospitalList objectAtIndex:indexPath.row];
+    UILabel *nameLabel = [[UILabel alloc] init];
+    nameLabel = (UILabel *)[cell viewWithTag:1];
+    nameLabel.text = [_HospitalDic objectForKey:@"HName"];
+    
+    UILabel *addressLabel = [[UILabel alloc] init];
+    addressLabel = (UILabel*)[cell viewWithTag:4];
+    addressLabel.text = [_HospitalDic objectForKey:@"HAddress"];
+    
+    
     
     return cell;
 }
@@ -61,4 +76,37 @@
         [searchBar resignFirstResponder];
     }
 }
+
+-(void)GetData{
+    //      HName       医院名称
+    //      CityName    城市名称
+    //      HCity       城市ID
+    //      PageSize
+    //      PageIndex
+    NSDictionary *dic = @{@"act" :@"list",
+                          @"CityName": @"成都",
+                          @"PageSize": @"10",
+                          @"PageIndex": @"1"};
+    
+    [[StoreOnlineNetworkEngine shareInstance] startNetWorkWithPath:@"hospital/hospital.ashx"
+                                                            params:dic
+                                                            repeat:YES
+                                                             isGet:YES
+                                                       resultBlock:^(BOOL bValidJSON, NSString *errorMsg, id result) {
+                                                           if(!bValidJSON)
+                                                           {
+                                                               UIAlertView * mslaView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"" delegate:errorMsg cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                                                               [mslaView show];
+                                                           }else
+                                                           {
+                                                               _HospitalList =result;
+                                                               [self.tableView reloadData];
+                                                           }}];
+}
 @end
+
+
+
+
+
+

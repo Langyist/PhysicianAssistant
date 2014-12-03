@@ -49,6 +49,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self performSegueWithIdentifier:@"GoLoginVC" sender:self];
+    NSLog(@"%ld",(long)indexPath.row);
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {

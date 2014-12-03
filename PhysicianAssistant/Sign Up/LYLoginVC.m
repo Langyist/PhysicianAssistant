@@ -25,12 +25,14 @@
     self.passwordText.secureTextEntry = YES;
     self.passwordText.clearsOnBeginEditing = YES;
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-    imageView.image = [UIImage imageNamed:@"定位"];
-    self.userText.leftView = imageView;
+    UIImageView *userimageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    userimageView.image = [UIImage imageNamed:@"定位"];
+    self.userText.leftView = userimageView;
     self.userText.leftViewMode = UITextFieldViewModeAlways;
     
-    self.passwordText.leftView = imageView;
+    UIImageView *pwdimageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    pwdimageView1.image = [UIImage imageNamed:@"定位"];
+    self.passwordText.leftView = pwdimageView1;
     self.passwordText.leftViewMode = UITextFieldViewModeAlways;
     
     self.loginButton.layer.cornerRadius = 5.0f;

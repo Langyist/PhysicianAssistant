@@ -22,6 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIView* view = [[UIView alloc] init];
+    self.tableView.tableFooterView = view;
+    
     [self GetData];
 
 }
@@ -63,7 +66,6 @@
                                                             repeat:YES
                                                              isGet:YES
                                                        resultBlock:^(BOOL bValidJSON, NSString *errorMsg, id result) {
-                                                           NSLog(@"%@",result);
                                                            if(!bValidJSON)
                                                            {
                                                                UIAlertView * mslaView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"" delegate:errorMsg cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];

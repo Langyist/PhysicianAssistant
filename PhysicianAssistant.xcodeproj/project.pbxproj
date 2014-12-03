@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4C46422F538A388E7094271D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A494930512A1F70F165B0D08 /* libPods.a */; };
+		AD549AA61A2EFDD0004C08C5 /* down_dark0.png in Resources */ = {isa = PBXBuildFile; fileRef = AD549AA31A2EFDD0004C08C5 /* down_dark0.png */; };
+		AD549AA71A2EFDD0004C08C5 /* ic_password.png in Resources */ = {isa = PBXBuildFile; fileRef = AD549AA41A2EFDD0004C08C5 /* ic_password.png */; };
+		AD549AA81A2EFDD0004C08C5 /* ic_username.png in Resources */ = {isa = PBXBuildFile; fileRef = AD549AA51A2EFDD0004C08C5 /* ic_username.png */; };
 		AD8D56C11A2DAEDB00D81DBA /* LYHospitalList.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8D56C01A2DAEDB00D81DBA /* LYHospitalList.m */; };
 		AD8D56C41A2DAF1E00D81DBA /* LYLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8D56C31A2DAF1E00D81DBA /* LYLoginVC.m */; };
 		AD8D56C71A2DAFCB00D81DBA /* SelectCity.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8D56C61A2DAFCB00D81DBA /* SelectCity.m */; };
@@ -39,6 +42,9 @@
 		92D0569C1EE1FF78619562C2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9F0BADB998D35336EB6E7DD7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A494930512A1F70F165B0D08 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD549AA31A2EFDD0004C08C5 /* down_dark0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_dark0.png; sourceTree = "<group>"; };
+		AD549AA41A2EFDD0004C08C5 /* ic_password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_password.png; sourceTree = "<group>"; };
+		AD549AA51A2EFDD0004C08C5 /* ic_username.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_username.png; sourceTree = "<group>"; };
 		AD8D56BF1A2DAEDB00D81DBA /* LYHospitalList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYHospitalList.h; sourceTree = "<group>"; };
 		AD8D56C01A2DAEDB00D81DBA /* LYHospitalList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYHospitalList.m; sourceTree = "<group>"; };
 		AD8D56C21A2DAF1E00D81DBA /* LYLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLoginVC.h; sourceTree = "<group>"; };
@@ -108,6 +114,9 @@
 		AD943B9A1A2DA97600F32359 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				AD549AA31A2EFDD0004C08C5 /* down_dark0.png */,
+				AD549AA41A2EFDD0004C08C5 /* ic_password.png */,
+				AD549AA51A2EFDD0004C08C5 /* ic_username.png */,
 				AD943B9B1A2DA97600F32359 /* 定位.png */,
 			);
 			path = image;
@@ -290,8 +299,11 @@
 			files = (
 				AD943BA61A2DA97600F32359 /* 定位.png in Resources */,
 				EF5EC5541A2C7F3300C9D980 /* Main.storyboard in Resources */,
+				AD549AA61A2EFDD0004C08C5 /* down_dark0.png in Resources */,
 				EF5EC5591A2C7F3300C9D980 /* LaunchScreen.xib in Resources */,
+				AD549AA71A2EFDD0004C08C5 /* ic_password.png in Resources */,
 				EF5EC5561A2C7F3300C9D980 /* Images.xcassets in Resources */,
+				AD549AA81A2EFDD0004C08C5 /* ic_username.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,7 +490,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PhysicianAssistant/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -492,7 +504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PhysicianAssistant/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

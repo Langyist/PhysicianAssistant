@@ -19,9 +19,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 50)];
+    searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 40)];
     self.tableView.tableHeaderView = searchBar;
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = [UIColor whiteColor];
+    self.tableView.tableFooterView = view;
+    self.tableView.backgroundColor = [UIColor grayColor];
 }
 - (IBAction)SelectCityButton:(id)sender {
     [self performSegueWithIdentifier:@"GoselectCity" sender:self];
@@ -48,7 +53,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self performSegueWithIdentifier:@"GoLoginVC" sender:self];
-    NSLog(@"%ld",(long)indexPath.row);
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {

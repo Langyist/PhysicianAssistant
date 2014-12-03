@@ -25,13 +25,13 @@
     self.passwordText.secureTextEntry = YES;
     self.passwordText.clearsOnBeginEditing = YES;
     
-    UIImageView *userimageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-    userimageView.image = [UIImage imageNamed:@"定位"];
+    UIImageView *userimageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 17, 20)];
+    userimageView.image = [UIImage imageNamed:@"ic_username"];
     self.userText.leftView = userimageView;
     self.userText.leftViewMode = UITextFieldViewModeAlways;
     
     UIImageView *pwdimageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-    pwdimageView1.image = [UIImage imageNamed:@"定位"];
+    pwdimageView1.image = [UIImage imageNamed:@"ic_password"];
     self.passwordText.leftView = pwdimageView1;
     self.passwordText.leftViewMode = UITextFieldViewModeAlways;
     

@@ -27,9 +27,11 @@
     
     self.signButton.layer.cornerRadius = 5.0f;
     
+    self.passwordText.delegate = self;
     self.passwordText.secureTextEntry = YES;
     self.passwordText.clearsOnBeginEditing = YES;
     
+    self.thirdText.delegate = self;
     self.thirdText.secureTextEntry = YES;
     self.thirdText.clearsOnBeginEditing = YES;
     
@@ -44,10 +46,6 @@
 
 }
 
--(UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
 - (void)closeKeyboard {
     
     [self.passwordText resignFirstResponder];

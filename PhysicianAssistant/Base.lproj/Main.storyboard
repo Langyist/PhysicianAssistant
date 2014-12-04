@@ -172,11 +172,6 @@
                                 <action selector="SelectCityButton:" destination="bos-KU-WoW" eventType="touchUpInside" id="yN5-0E-hza"/>
                             </connections>
                         </button>
-                        <barButtonItem key="rightBarButtonItem" title="定位" id="yu9-mC-b3l">
-                            <connections>
-                                <action selector="locationBarButton:" destination="bos-KU-WoW" id="CfN-Hr-Dvz"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="eG2-mI-meX" kind="push" identifier="GoselectCity" id="FP5-r2-K6v"/>

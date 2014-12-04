@@ -181,7 +181,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xAn-ZD-DFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="342" y="63"/>
+            <point key="canvasLocation" x="42" y="63"/>
         </scene>
         <!--注册-->
         <scene sceneID="oMc-Uw-bUy">
@@ -1126,7 +1126,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="用户注册">
-                                    <color key="titleColor" red="0.086274509799999996" green="0.6705882353" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -1335,7 +1334,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xV-31-9rj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-357" y="190"/>
+            <point key="canvasLocation" x="-669" y="63"/>
         </scene>
     </scenes>
     <resources>

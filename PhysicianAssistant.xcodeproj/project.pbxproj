@@ -18,6 +18,14 @@
 		AD943BA81A2DA97600F32359 /* LYGetcodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD943BA11A2DA97600F32359 /* LYGetcodeVC.m */; };
 		AD943BA91A2DA97600F32359 /* LYPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD943BA31A2DA97600F32359 /* LYPasswordVC.m */; };
 		AD943BAA1A2DA97600F32359 /* LYSignupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD943BA51A2DA97600F32359 /* LYSignupVC.m */; };
+		ADB3BAEE1A3038C000BBC80F /* 图片_02.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB3BAEC1A3038C000BBC80F /* 图片_02.png */; };
+		ADB3BAEF1A3038C000BBC80F /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADB3BAED1A3038C000BBC80F /* logo.jpg */; };
+		ADB3BAF21A303E3600BBC80F /* LYMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB3BAF11A303E3600BBC80F /* LYMainVC.m */; };
+		ADB3BAF41A303F2100BBC80F /* 病例页提醒.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB3BAF31A303F2100BBC80F /* 病例页提醒.png */; };
+		ADB3BAF91A30402700BBC80F /* 邻里互助.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB3BAF51A30402700BBC80F /* 邻里互助.png */; };
+		ADB3BAFA1A30402700BBC80F /* 物业管理.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB3BAF61A30402700BBC80F /* 物业管理.png */; };
+		ADB3BAFB1A30402700BBC80F /* 小区交流.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB3BAF71A30402700BBC80F /* 小区交流.png */; };
+		ADB3BAFC1A30402700BBC80F /* ic_share_to_friends.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB3BAF81A30402700BBC80F /* ic_share_to_friends.png */; };
 		EF2F1B201A2C8B190048997F /* StoreOnlineNetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2F1B1F1A2C8B190048997F /* StoreOnlineNetworkEngine.m */; };
 		EF5EC54B1A2C7F3200C9D980 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5EC54A1A2C7F3200C9D980 /* main.m */; };
 		EF5EC54E1A2C7F3200C9D980 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5EC54D1A2C7F3200C9D980 /* AppDelegate.m */; };
@@ -58,6 +66,15 @@
 		AD943BA31A2DA97600F32359 /* LYPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPasswordVC.m; sourceTree = "<group>"; };
 		AD943BA41A2DA97600F32359 /* LYSignupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSignupVC.h; sourceTree = "<group>"; };
 		AD943BA51A2DA97600F32359 /* LYSignupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSignupVC.m; sourceTree = "<group>"; };
+		ADB3BAEC1A3038C000BBC80F /* 图片_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "图片_02.png"; sourceTree = "<group>"; };
+		ADB3BAED1A3038C000BBC80F /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
+		ADB3BAF01A303E3600BBC80F /* LYMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMainVC.h; sourceTree = "<group>"; };
+		ADB3BAF11A303E3600BBC80F /* LYMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMainVC.m; sourceTree = "<group>"; };
+		ADB3BAF31A303F2100BBC80F /* 病例页提醒.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "病例页提醒.png"; sourceTree = "<group>"; };
+		ADB3BAF51A30402700BBC80F /* 邻里互助.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "邻里互助.png"; sourceTree = "<group>"; };
+		ADB3BAF61A30402700BBC80F /* 物业管理.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "物业管理.png"; sourceTree = "<group>"; };
+		ADB3BAF71A30402700BBC80F /* 小区交流.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "小区交流.png"; sourceTree = "<group>"; };
+		ADB3BAF81A30402700BBC80F /* ic_share_to_friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_share_to_friends.png; sourceTree = "<group>"; };
 		EF2F1B1E1A2C8B190048997F /* StoreOnlineNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreOnlineNetworkEngine.h; sourceTree = "<group>"; };
 		EF2F1B1F1A2C8B190048997F /* StoreOnlineNetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreOnlineNetworkEngine.m; sourceTree = "<group>"; };
 		EF5EC5451A2C7F3200C9D980 /* PhysicianAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhysicianAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +131,13 @@
 		AD943B9A1A2DA97600F32359 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				ADB3BAF51A30402700BBC80F /* 邻里互助.png */,
+				ADB3BAF61A30402700BBC80F /* 物业管理.png */,
+				ADB3BAF71A30402700BBC80F /* 小区交流.png */,
+				ADB3BAF81A30402700BBC80F /* ic_share_to_friends.png */,
+				ADB3BAF31A303F2100BBC80F /* 病例页提醒.png */,
+				ADB3BAEC1A3038C000BBC80F /* 图片_02.png */,
+				ADB3BAED1A3038C000BBC80F /* logo.jpg */,
 				AD549AA31A2EFDD0004C08C5 /* down_dark0.png */,
 				AD549AA41A2EFDD0004C08C5 /* ic_password.png */,
 				AD549AA51A2EFDD0004C08C5 /* ic_username.png */,
@@ -177,10 +201,12 @@
 				EF5EC54D1A2C7F3200C9D980 /* AppDelegate.m */,
 				EF5EC54F1A2C7F3200C9D980 /* ViewController.h */,
 				EF5EC5501A2C7F3200C9D980 /* ViewController.m */,
-				AD8D56BF1A2DAEDB00D81DBA /* LYHospitalList.h */,
-				AD8D56C01A2DAEDB00D81DBA /* LYHospitalList.m */,
 				AD8D56C51A2DAFCB00D81DBA /* SelectCity.h */,
 				AD8D56C61A2DAFCB00D81DBA /* SelectCity.m */,
+				AD8D56BF1A2DAEDB00D81DBA /* LYHospitalList.h */,
+				AD8D56C01A2DAEDB00D81DBA /* LYHospitalList.m */,
+				ADB3BAF01A303E3600BBC80F /* LYMainVC.h */,
+				ADB3BAF11A303E3600BBC80F /* LYMainVC.m */,
 				EF5EC5521A2C7F3300C9D980 /* Main.storyboard */,
 				EF5EC5551A2C7F3300C9D980 /* Images.xcassets */,
 				EF5EC5571A2C7F3300C9D980 /* LaunchScreen.xib */,
@@ -299,11 +325,18 @@
 			files = (
 				AD943BA61A2DA97600F32359 /* 定位.png in Resources */,
 				EF5EC5541A2C7F3300C9D980 /* Main.storyboard in Resources */,
+				ADB3BAFC1A30402700BBC80F /* ic_share_to_friends.png in Resources */,
+				ADB3BAEE1A3038C000BBC80F /* 图片_02.png in Resources */,
 				AD549AA61A2EFDD0004C08C5 /* down_dark0.png in Resources */,
+				ADB3BAEF1A3038C000BBC80F /* logo.jpg in Resources */,
+				ADB3BAF41A303F2100BBC80F /* 病例页提醒.png in Resources */,
 				EF5EC5591A2C7F3300C9D980 /* LaunchScreen.xib in Resources */,
 				AD549AA71A2EFDD0004C08C5 /* ic_password.png in Resources */,
 				EF5EC5561A2C7F3300C9D980 /* Images.xcassets in Resources */,
+				ADB3BAFA1A30402700BBC80F /* 物业管理.png in Resources */,
+				ADB3BAF91A30402700BBC80F /* 邻里互助.png in Resources */,
 				AD549AA81A2EFDD0004C08C5 /* ic_username.png in Resources */,
+				ADB3BAFB1A30402700BBC80F /* 小区交流.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +394,7 @@
 				AD8D56C41A2DAF1E00D81DBA /* LYLoginVC.m in Sources */,
 				AD943BA81A2DA97600F32359 /* LYGetcodeVC.m in Sources */,
 				AD8D56C71A2DAFCB00D81DBA /* SelectCity.m in Sources */,
+				ADB3BAF21A303E3600BBC80F /* LYMainVC.m in Sources */,
 				EF5EC54B1A2C7F3200C9D980 /* main.m in Sources */,
 				EF2F1B201A2C8B190048997F /* StoreOnlineNetworkEngine.m in Sources */,
 				AD8D56C11A2DAEDB00D81DBA /* LYHospitalList.m in Sources */,

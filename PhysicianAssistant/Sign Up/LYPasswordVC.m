@@ -11,12 +11,14 @@
 @interface LYPasswordVC () <UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate> {
     
     NSArray *pickerArray;
+    BOOL showMnue;
 }
 @property (weak, nonatomic) IBOutlet UITextField *passwordText;
 @property (weak, nonatomic) IBOutlet UITextField *thirdText;
 @property (weak, nonatomic) IBOutlet UIButton *signButton;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 @property (weak, nonatomic) IBOutlet UILabel *pickerViewLabel;
+@property (weak, nonatomic) IBOutlet UIButton *ViewButton;
 
 @end
 
@@ -24,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    showMnue = YES;
     
     self.signButton.layer.cornerRadius = 5.0f;
     
@@ -36,14 +39,28 @@
     self.thirdText.clearsOnBeginEditing = YES;
     
     self.pickerView.delegate = self;
+    self.pickerView.hidden = YES;
     
-    pickerArray = [NSArray arrayWithObjects:@"科室",@"外科",@"内科",@"医学科",@"脑壳",@"儿科", nil];
+    self.ViewButton.layer.cornerRadius = 5.0f;
+    self.pickerViewLabel.text = @"科室";
     
+    
+    pickerArray = [[NSArray alloc] initWithObjects:@"科室",@"外科",@"内科",@"医学科",@"脑壳",@"儿科",@"妇科",@"妇产科",@"科室",@"外科",@"内科",@"医学科",@"脑壳",@"儿科",@"妇科",@"妇产科",nil];
     self.pickerView.hidden = YES;
     
     UITapGestureRecognizer *Gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboard)];
     [self.view addGestureRecognizer:Gesture];
 
+}
+- (IBAction)mnueButton:(id)sender {
+    if (showMnue) {
+        self.pickerView.hidden = NO;
+        showMnue = NO;
+    }else {
+        
+        self.pickerView.hidden = YES;
+        showMnue = YES;
+    }
 }
 
 - (void)closeKeyboard {
@@ -84,9 +101,14 @@
     return [pickerArray count];
 }
 
+-(NSString*) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    return [pickerArray objectAtIndex:row];
+}
+
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     
-    
+    NSInteger index = [self.pickerView selectedRowInComponent:0];
+    self.pickerViewLabel.text = [pickerArray objectAtIndex:index];
 }
 
 @end

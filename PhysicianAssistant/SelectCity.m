@@ -26,12 +26,12 @@
     UIView* view = [[UIView alloc] init];
     self.tableView.tableFooterView = view;
     
+    UISearchBar *search = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 40)];
+    self.tableView.tableHeaderView = search;
+    
     [self GetData];
 
 }
-//- (IBAction)backBarButton:(id)sender {
-//    [self performSegueWithIdentifier:@"GoselectHospital" sender:self];
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

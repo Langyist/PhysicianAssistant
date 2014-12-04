@@ -14,6 +14,7 @@
     NSMutableArray* _HospitalList;
     NSDictionary* _HospitalDic;
 }
+@property (weak, nonatomic) IBOutlet UIButton *titleBar;
 
 @end
 
@@ -21,6 +22,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.titleBar.frame.size.width, self.titleBar.frame.size.height - 20, 15, 15)];
+    imageView.image = [UIImage imageNamed:@"down_dark0"];
+    [self.titleBar addSubview:imageView];
     
     searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 40)];
     self.tableView.tableHeaderView = searchBar;

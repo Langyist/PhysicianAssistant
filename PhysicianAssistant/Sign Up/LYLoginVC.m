@@ -48,7 +48,7 @@
 }
 //登陆Button
 - (IBAction)loginButton:(id)sender {
-    
+    [self performSegueWithIdentifier:@"GomainVC" sender:self];
 }
 
 //用户注册Button

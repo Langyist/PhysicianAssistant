@@ -9,7 +9,8 @@
 #import "LYGetcodeVC.h"
 
 @interface LYGetcodeVC ()<UITextFieldDelegate> {
-    
+    int m_dTime;
+    NSTimer *m_timer;
 }
 @property (weak, nonatomic) IBOutlet UITextField *codeTextField;
 @property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
@@ -23,6 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    m_dTime = 60;
     
     self.nextButton.layer.cornerRadius = 5.0f;
     
@@ -41,7 +44,11 @@
 }
 //获取验证码Button
 - (IBAction)getcodeButton:(id)sender {
-    
+    if (m_dTime<1) {
+        [m_timer invalidate];
+    }
+    m_dTime --;
+    [self.getcodeButton setTitle: [[NSString alloc] initWithFormat:@"%d",m_dTime] forState: UIControlStateNormal];
 }
 //下一步Button
 - (IBAction)nextButton:(id)sender {

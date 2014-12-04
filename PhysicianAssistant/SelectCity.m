@@ -14,6 +14,7 @@
     NSDictionary * _Section;
     NSMutableArray * _CellList;
     NSDictionary * _CellInfor;
+    NSInteger index;
     
 }
 @end
@@ -28,6 +29,9 @@
     [self GetData];
 
 }
+//- (IBAction)backBarButton:(id)sender {
+//    [self performSegueWithIdentifier:@"GoselectHospital" sender:self];
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -76,4 +80,5 @@
                                                                [self.tableView reloadData];
                                                            }}];
 }
+
 @end

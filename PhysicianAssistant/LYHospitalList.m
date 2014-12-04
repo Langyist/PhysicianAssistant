@@ -36,6 +36,10 @@
 - (IBAction)SelectCityButton:(id)sender {
     [self performSegueWithIdentifier:@"GoselectCity" sender:self];
 }
+//定位
+- (IBAction)locationBarButton:(UIBarButtonItem *)sender {
+    
+}
 
 #pragma mark - Table view data source
 

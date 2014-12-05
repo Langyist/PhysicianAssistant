@@ -610,21 +610,21 @@
                                 <exclude reference="2GW-xF-KQR"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="BCq-Hj-I2S"/>
+                                <exclude reference="R5g-sR-jUB"/>
+                                <exclude reference="hjZ-FJ-NPM"/>
+                                <exclude reference="xXU-D4-v6n"/>
+                                <exclude reference="T17-Qq-SEg"/>
+                                <exclude reference="Vxh-AU-L3F"/>
+                                <exclude reference="M2s-ep-bj8"/>
+                                <exclude reference="leq-AB-drS"/>
+                                <exclude reference="9Na-eP-MKY"/>
+                                <exclude reference="LyZ-BV-dVi"/>
+                                <exclude reference="Tf5-Bg-D3l"/>
+                                <exclude reference="sE5-Ug-Gal"/>
                                 <exclude reference="3m0-kx-JYZ"/>
                                 <exclude reference="AcZ-7q-baF"/>
                                 <exclude reference="ixG-ve-N6E"/>
-                                <exclude reference="9Na-eP-MKY"/>
-                                <exclude reference="LyZ-BV-dVi"/>
-                                <exclude reference="M2s-ep-bj8"/>
-                                <exclude reference="leq-AB-drS"/>
-                                <exclude reference="T17-Qq-SEg"/>
-                                <exclude reference="Vxh-AU-L3F"/>
-                                <exclude reference="hjZ-FJ-NPM"/>
-                                <exclude reference="xXU-D4-v6n"/>
-                                <exclude reference="Tf5-Bg-D3l"/>
-                                <exclude reference="sE5-Ug-Gal"/>
-                                <exclude reference="BCq-Hj-I2S"/>
-                                <exclude reference="R5g-sR-jUB"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -638,21 +638,21 @@
                                 <include reference="2GW-xF-KQR"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="BCq-Hj-I2S"/>
+                                <include reference="R5g-sR-jUB"/>
+                                <include reference="hjZ-FJ-NPM"/>
+                                <include reference="xXU-D4-v6n"/>
+                                <include reference="T17-Qq-SEg"/>
+                                <include reference="Vxh-AU-L3F"/>
+                                <include reference="M2s-ep-bj8"/>
+                                <include reference="leq-AB-drS"/>
+                                <include reference="9Na-eP-MKY"/>
+                                <include reference="LyZ-BV-dVi"/>
+                                <include reference="Tf5-Bg-D3l"/>
+                                <include reference="sE5-Ug-Gal"/>
                                 <include reference="3m0-kx-JYZ"/>
                                 <include reference="AcZ-7q-baF"/>
                                 <include reference="ixG-ve-N6E"/>
-                                <include reference="9Na-eP-MKY"/>
-                                <include reference="LyZ-BV-dVi"/>
-                                <include reference="M2s-ep-bj8"/>
-                                <include reference="leq-AB-drS"/>
-                                <include reference="T17-Qq-SEg"/>
-                                <include reference="Vxh-AU-L3F"/>
-                                <include reference="hjZ-FJ-NPM"/>
-                                <include reference="xXU-D4-v6n"/>
-                                <include reference="Tf5-Bg-D3l"/>
-                                <include reference="sE5-Ug-Gal"/>
-                                <include reference="BCq-Hj-I2S"/>
-                                <include reference="R5g-sR-jUB"/>
                             </mask>
                         </variation>
                     </view>

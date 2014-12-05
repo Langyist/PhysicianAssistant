@@ -19,7 +19,6 @@
 		AD7C29AA1A302E6A004B4EFE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7C29A91A302E6A004B4EFE /* CoreGraphics.framework */; };
 		AD7C29AC1A302E71004B4EFE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7C29AB1A302E71004B4EFE /* Security.framework */; };
 		AD7C29EC1A302F8D004B4EFE /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD7C29EB1A302F8D004B4EFE /* mapapi.bundle */; };
-		AD7C29F31A304578004B4EFE /* UserInfor.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7C29F21A304578004B4EFE /* UserInfor.m */; };
 		AD8D56C11A2DAEDB00D81DBA /* LYHospitalList.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8D56C01A2DAEDB00D81DBA /* LYHospitalList.m */; };
 		AD8D56C41A2DAF1E00D81DBA /* LYLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8D56C31A2DAF1E00D81DBA /* LYLoginVC.m */; };
 		AD8D56C71A2DAFCB00D81DBA /* SelectCity.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD8D56C61A2DAFCB00D81DBA /* SelectCity.mm */; };
@@ -132,8 +131,6 @@
 		AD7C29E91A302F42004B4EFE /* BMKUtilsComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKUtilsComponent.h; sourceTree = "<group>"; };
 		AD7C29EA1A302F42004B4EFE /* BMKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKVersion.h; sourceTree = "<group>"; };
 		AD7C29EB1A302F8D004B4EFE /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
-		AD7C29F11A304578004B4EFE /* UserInfor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfor.h; sourceTree = "<group>"; };
-		AD7C29F21A304578004B4EFE /* UserInfor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfor.m; sourceTree = "<group>"; };
 		AD8D56BF1A2DAEDB00D81DBA /* LYHospitalList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYHospitalList.h; sourceTree = "<group>"; };
 		AD8D56C01A2DAEDB00D81DBA /* LYHospitalList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYHospitalList.m; sourceTree = "<group>"; };
 		AD8D56C21A2DAF1E00D81DBA /* LYLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLoginVC.h; sourceTree = "<group>"; };
@@ -147,6 +144,8 @@
 		AD943BA31A2DA97600F32359 /* LYPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPasswordVC.m; sourceTree = "<group>"; };
 		AD943BA41A2DA97600F32359 /* LYSignupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSignupVC.h; sourceTree = "<group>"; };
 		AD943BA51A2DA97600F32359 /* LYSignupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSignupVC.m; sourceTree = "<group>"; };
+		ADAF3CD11A316076008134A4 /* CommonDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefault.h; sourceTree = "<group>"; };
+		ADAF3CD21A316076008134A4 /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
 		ADB3BAEC1A3038C000BBC80F /* 图片_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "图片_02.png"; sourceTree = "<group>"; };
 		ADB3BAED1A3038C000BBC80F /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
 		ADB3BAF01A303E3600BBC80F /* LYMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMainVC.h; sourceTree = "<group>"; };
@@ -335,6 +334,15 @@
 			path = "Sign Up";
 			sourceTree = "<group>";
 		};
+		ADAF3CD01A31602B008134A4 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				ADAF3CD11A316076008134A4 /* CommonDefault.h */,
+				ADAF3CD21A316076008134A4 /* CommonDefine.h */,
+			);
+			name = Supports;
+			sourceTree = "<group>";
+		};
 		EF2F1B1D1A2C8B190048997F /* DataEngine */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +377,7 @@
 		EF5EC5471A2C7F3200C9D980 /* PhysicianAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				ADAF3CD01A31602B008134A4 /* Supports */,
 				AD943B9A1A2DA97600F32359 /* image */,
 				AD943B9F1A2DA97600F32359 /* login */,
 				EF2F1B1D1A2C8B190048997F /* DataEngine */,
@@ -386,8 +395,6 @@
 				EF5EC5551A2C7F3300C9D980 /* Images.xcassets */,
 				EF5EC5571A2C7F3300C9D980 /* LaunchScreen.xib */,
 				EF5EC5481A2C7F3200C9D980 /* Supporting Files */,
-				AD7C29F11A304578004B4EFE /* UserInfor.h */,
-				AD7C29F21A304578004B4EFE /* UserInfor.m */,
 			);
 			path = PhysicianAssistant;
 			sourceTree = "<group>";
@@ -566,7 +573,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD7C29F31A304578004B4EFE /* UserInfor.m in Sources */,
 				EF5EC5511A2C7F3200C9D980 /* ViewController.m in Sources */,
 				AD943BA91A2DA97600F32359 /* LYPasswordVC.m in Sources */,
 				AD943BAA1A2DA97600F32359 /* LYSignupVC.m in Sources */,

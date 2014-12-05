@@ -9,8 +9,8 @@
 #import "LYHospitalList.h"
 #import "StoreOnlineNetworkEngine.h"
 #import "BMKLocationService.h"
-#import "UserInfor.h"
 #import "SelectCity.h"
+#import "CommonDefine.h"
 
 @interface LYHospitalList ()<BMKLocationServiceDelegate>{
     UISearchBar *searchBar;
@@ -41,17 +41,6 @@
     self.tableView.tableFooterView = view;
     
     self.tableView.backgroundColor = [UIColor grayColor];
-    
-    if ([[UserInfor shareInstance] City] == nil) {
-        //初始化BMKLocationService
-        _locService = [[BMKLocationService alloc]init];
-        _locService.delegate = self;
-        //启动LocationService
-        [_locService startUserLocationService];
-    }else{
-        [self GetData:[[UserInfor shareInstance] City] ];
-    }
-    
 
 }
 - (IBAction)SelectCityButton:(id)sender {
@@ -60,9 +49,24 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    //判断并接收返回的参数
-    NSLog(@"%@",Title);
+    id city = [[NSUserDefaults standardUserDefaults] objectForKey:kLocalChoosCity];
+    if (city == nil) {
+        //初始化BMKLocationService
+        _locService = [[BMKLocationService alloc]init];
+        _locService.delegate = self;
+        //启动LocationService
+        [_locService startUserLocationService];
+    }else{
+        [self GetData:city];
+    }
 }
+
+-(void)UpdateUI{
+    id city = [[NSUserDefaults standardUserDefaults] objectForKey:kLocalChoosCity];
+    [self.tabBarItem setTitle:city];
+    [self.tableView reloadData];
+}
+
 
 
 #pragma mark - Navigation
@@ -98,8 +102,6 @@
     UILabel *addressLabel = [[UILabel alloc] init];
     addressLabel = (UILabel*)[cell viewWithTag:4];
     addressLabel.text = [_HospitalDic objectForKey:@"HAddress"];
-    
-    
     
     return cell;
 }
@@ -138,7 +140,7 @@
                                                            }else
                                                            {
                                                                _HospitalList =result;
-                                                               [self.tableView reloadData];
+                                                               [self UpdateUI];
                                                            }}];
 }
 
@@ -172,7 +174,7 @@
             if(cityName.length-1 > 0){
                 //服务器不能识别带“市”的标示
                 cityName = [cityName substringToIndex:cityName.length-1];
-                [[UserInfor shareInstance] setCity:cityName];
+                [[NSUserDefaults standardUserDefaults] setObject:cityName forKey:kLocalChoosCity];
                 [self GetData:cityName];
                 //结束定位
                 [_locService stopUserLocationService];

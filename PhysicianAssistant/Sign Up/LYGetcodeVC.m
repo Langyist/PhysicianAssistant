@@ -7,6 +7,8 @@
 //
 
 #import "LYGetcodeVC.h"
+#import "CommonDefine.h"
+#import "StoreOnlineNetworkEngine.h"
 
 @interface LYGetcodeVC ()<UITextFieldDelegate> {
     int m_dTime;
@@ -70,7 +72,16 @@
 }
 //下一步Button
 - (IBAction)nextButton:(id)sender {
-    [self performSegueWithIdentifier:@"GoPasswordVC" sender:self];
+    if (self.codeTextField.text == nil && [self.codeTextField.text isEqual:@""]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"温馨提示"
+                                                        message:@"验证码不能为空"
+                                                       delegate:self
+                                              cancelButtonTitle:@"确定"
+                                              otherButtonTitles:@"取消", nil];
+        [alert show];
+    }else {
+        [self performSegueWithIdentifier:@"GoPasswordVC" sender:self];
+    }
 }
 
 #pragma mark UITextField delegate

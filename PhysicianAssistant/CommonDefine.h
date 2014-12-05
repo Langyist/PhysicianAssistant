@@ -15,6 +15,8 @@
 #pragma mark - -- network url --
 #define kIp                                     @"192.168.1.242"
 #define kUrlCityList                            @"hospital/hospital.ashx"
+#define kUsersList                            @"users/UsersList.ashx?"
+
 
 
 

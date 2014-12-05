@@ -50,12 +50,32 @@
 }
 //登陆Button
 - (IBAction)loginButton:(id)sender {
-    [self performSegueWithIdentifier:@"GomainVC" sender:self];
+    if (self.userText.text == nil && [self.userText.text isEqual:@""]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"温馨提示"
+                                                        message:@"用户名不能为空"
+                                                       delegate:self
+                                              cancelButtonTitle:@"确定"
+                                              otherButtonTitles:@"取消", nil];
+        [alert show];
+    }else if (self.passwordText.text == nil && [self.passwordText.text isEqual:@""]) {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"温馨提示"
+                                                        message:@"密码不能为空"
+                                                       delegate:self
+                                              cancelButtonTitle:@"确定"
+                                              otherButtonTitles:@"取消", nil];
+        [alert show];
+    }
+    else {
+        [self GetLoginData];
+    }
 }
 
 //用户注册Button
 - (IBAction)SignUpButton:(id)sender {
+    
     [self performSegueWithIdentifier:@"GoSignUpVC" sender:self];
+    
 }
 //忘记密码Button
 - (IBAction)ForgetButton:(id)sender {
@@ -71,18 +91,28 @@
     }
     return YES;
 }
-
+//登陆验证
 - (void)GetLoginData {
     NSDictionary *dic = @{@"act" :@"list",
                     @"LoginName" :self.passwordText.text,
-                           @"Psd":self.userText.text,
+                          @"Psd" :self.userText.text,
                       };
-    [[StoreOnlineNetworkEngine shareInstance] startNetWorkWithPath:kIp
+    [[StoreOnlineNetworkEngine shareInstance] startNetWorkWithPath:kUsersList
                                                             params:dic
                                                             repeat:YES
                                                              isGet:YES
                                                        resultBlock:^(BOOL bValidJSON, NSString *errorMsg, id result) {
-        
+                                                           if (!bValidJSON) {
+                                                               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"温馨提示"
+                                                                                                               message:errorMsg
+                                                                                                              delegate:self
+                                                                                                     cancelButtonTitle:@"确定"
+                                                                                                     otherButtonTitles:@"取消", nil];
+                                                               [alert show];
+                                                           }else {
+                                                               
+                                                               [self performSegueWithIdentifier:@"GomainVC" sender:self];
+                                                           }
     }];
 }
 

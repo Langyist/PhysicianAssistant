@@ -20,4 +20,16 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
+- (IBAction)gomedicalButton:(id)sender {
+    [self performSegueWithIdentifier:@"GoMedicalVC" sender:self];
+}
+
+- (IBAction)GoCircleButton:(id)sender {
+    [self performSegueWithIdentifier:@"GoCircleVC" sender:self];
+}
+
+- (IBAction)CommunicateButton:(id)sender {
+    [self performSegueWithIdentifier:@"GoCommunicateVC" sender:self];
+}
+
 @end

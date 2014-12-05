@@ -466,6 +466,9 @@
                                         <include reference="lvH-Rk-bTl"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="gomedicalButton:" destination="M7j-xa-9M0" eventType="touchUpInside" id="IdA-uQ-JzL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdv-Lm-K92">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -488,6 +491,9 @@
                                         <include reference="IBQ-wU-pbK"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="CommunicateButton:" destination="M7j-xa-9M0" eventType="touchUpInside" id="95N-s8-2Ny"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ju4-lQ-FYq">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -513,6 +519,9 @@
                                         <include reference="hhn-qw-gF2"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="GoCircleButton:" destination="M7j-xa-9M0" eventType="touchUpInside" id="neu-11-viv"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="病历夹" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHP-6i-DxL">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -657,10 +666,69 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="主页" id="su2-Ma-yET"/>
+                    <connections>
+                        <segue destination="2Z6-6O-vbW" kind="push" identifier="GoMedicalVC" id="jGH-vC-Xh3"/>
+                        <segue destination="EXP-th-9zb" kind="push" identifier="GoCircleVC" id="zeG-YS-GdW"/>
+                        <segue destination="ytX-Hw-5tt" kind="push" identifier="GoCommunicateVC" id="a1x-i9-Etg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ati-vm-oDi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1809" y="1217"/>
+        </scene>
+        <!--病历夹-->
+        <scene sceneID="TP4-Lv-R3J">
+            <objects>
+                <viewController id="2Z6-6O-vbW" customClass="LYMedicalVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a1c-Zp-5F8"/>
+                        <viewControllerLayoutGuide type="bottom" id="qrq-Aa-Zqh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JN1-wQ-HM1">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="病历夹" id="qFZ-Ak-gps"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rxc-cm-xIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2586" y="786"/>
+        </scene>
+        <!--通信-->
+        <scene sceneID="w7J-QD-exV">
+            <objects>
+                <viewController id="ytX-Hw-5tt" customClass="LYCommunicateVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ULa-RA-ne7"/>
+                        <viewControllerLayoutGuide type="bottom" id="0s2-3O-F1t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cbc-yp-phj">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="通信" id="jQO-qN-C4s"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KvZ-DG-t1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2586" y="2177"/>
+        </scene>
+        <!--医学圈-->
+        <scene sceneID="0vx-o1-69c">
+            <objects>
+                <viewController id="EXP-th-9zb" customClass="LYCircleVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EDf-4z-7gg"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zqt-HT-nsc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hW6-ca-nXY">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="医学圈" id="0Q1-Qt-E6o"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="og1-bf-xcz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2586" y="1497"/>
         </scene>
         <!--填写验证码-->
         <scene sceneID="qAZ-ra-T9V">

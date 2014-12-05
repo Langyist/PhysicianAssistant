@@ -394,6 +394,26 @@
             </objects>
             <point key="canvasLocation" x="1827" y="79"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qQm-6q-Ide">
+            <objects>
+                <navigationController id="Cy5-jd-Pdh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tWh-Wt-bV7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.086274509799999996" green="0.6705882353" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="M7j-xa-9M0" kind="relationship" relationship="rootViewController" id="zoi-Sr-ee9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZ0-kE-J6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002" y="1217"/>
+        </scene>
         <!--主页-->
         <scene sceneID="72C-AX-ZXU">
             <objects>
@@ -640,7 +660,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ati-vm-oDi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1827" y="745"/>
+            <point key="canvasLocation" x="1809" y="1217"/>
         </scene>
         <!--填写验证码-->
         <scene sceneID="qAZ-ra-T9V">
@@ -1344,7 +1364,7 @@
                         <outlet property="passwordText" destination="RkX-PF-Mys" id="GQ7-Hb-7ch"/>
                         <outlet property="userText" destination="ATc-Cx-qKN" id="alf-MA-Zll"/>
                         <segue destination="oME-Dc-CIN" kind="push" identifier="GoSignUpVC" id="fZg-JG-lfa"/>
-                        <segue destination="M7j-xa-9M0" kind="push" identifier="GomainVC" id="gxK-DV-S2f"/>
+                        <segue destination="Cy5-jd-Pdh" kind="modal" identifier="GomainVC" id="mgI-WT-KJl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bK-hE-8Ih" userLabel="First Responder" sceneMemberID="firstResponder"/>

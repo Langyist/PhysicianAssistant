@@ -35,6 +35,7 @@
 		ADB3BAFA1A30402700BBC80F /* 物业管理.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB3BAF61A30402700BBC80F /* 物业管理.png */; };
 		ADB3BAFB1A30402700BBC80F /* 小区交流.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB3BAF71A30402700BBC80F /* 小区交流.png */; };
 		ADB3BAFC1A30402700BBC80F /* ic_share_to_friends.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB3BAF81A30402700BBC80F /* ic_share_to_friends.png */; };
+		ADB9AEFF1A314A540071DC43 /* 便民.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB9AEFE1A314A540071DC43 /* 便民.png */; };
 		EF2F1B201A2C8B190048997F /* StoreOnlineNetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2F1B1F1A2C8B190048997F /* StoreOnlineNetworkEngine.m */; };
 		EF5EC54B1A2C7F3200C9D980 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5EC54A1A2C7F3200C9D980 /* main.m */; };
 		EF5EC54E1A2C7F3200C9D980 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5EC54D1A2C7F3200C9D980 /* AppDelegate.m */; };
@@ -155,6 +156,7 @@
 		ADB3BAF61A30402700BBC80F /* 物业管理.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "物业管理.png"; sourceTree = "<group>"; };
 		ADB3BAF71A30402700BBC80F /* 小区交流.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "小区交流.png"; sourceTree = "<group>"; };
 		ADB3BAF81A30402700BBC80F /* ic_share_to_friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_share_to_friends.png; sourceTree = "<group>"; };
+		ADB9AEFE1A314A540071DC43 /* 便民.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "便民.png"; sourceTree = "<group>"; };
 		EF2F1B1E1A2C8B190048997F /* StoreOnlineNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreOnlineNetworkEngine.h; sourceTree = "<group>"; };
 		EF2F1B1F1A2C8B190048997F /* StoreOnlineNetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreOnlineNetworkEngine.m; sourceTree = "<group>"; };
 		EF5EC5451A2C7F3200C9D980 /* PhysicianAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhysicianAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -301,6 +303,7 @@
 		AD943B9A1A2DA97600F32359 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				ADB9AEFE1A314A540071DC43 /* 便民.png */,
 				ADB3BAF51A30402700BBC80F /* 邻里互助.png */,
 				ADB3BAF61A30402700BBC80F /* 物业管理.png */,
 				ADB3BAF71A30402700BBC80F /* 小区交流.png */,
@@ -506,6 +509,7 @@
 				ADB3BAF41A303F2100BBC80F /* 病例页提醒.png in Resources */,
 				EF5EC5591A2C7F3300C9D980 /* LaunchScreen.xib in Resources */,
 				AD549AA71A2EFDD0004C08C5 /* ic_password.png in Resources */,
+				ADB9AEFF1A314A540071DC43 /* 便民.png in Resources */,
 				AD7C29EC1A302F8D004B4EFE /* mapapi.bundle in Resources */,
 				EF5EC5561A2C7F3300C9D980 /* Images.xcassets in Resources */,
 				ADB3BAFA1A30402700BBC80F /* 物业管理.png in Resources */,

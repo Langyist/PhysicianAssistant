@@ -33,7 +33,7 @@
 + (StoreOnlineNetworkEngine *)shareInstance {
     static StoreOnlineNetworkEngine *instance = nil;
     if (instance == nil) {
-        instance = [[StoreOnlineNetworkEngine alloc] initWithHostName:@"121.40.207.159/inCommunity"];
+        instance = [[StoreOnlineNetworkEngine alloc] initWithHostName:@"192.168.1.242"];
     }
     return instance;
 }
@@ -193,14 +193,14 @@
             NSDictionary *responseDic = nil;
             if ([responseJSON isKindOfClass:[NSDictionary class]]) {
                 responseDic = (NSDictionary *)responseJSON;
-                responseStatus = [responseDic objectForKey:@"status"];
+                responseStatus = [responseDic objectForKey:@"Status"];
             }
             
             if (responseStatus) {
                 NSInteger statusCode = [responseStatus integerValue];
-                if (statusCode != 200) {
+                if (statusCode != 0) {
                     bValidJSON = NO;
-                    errorMsg = [responseDic objectForKey:@"message"];
+                    errorMsg = [responseDic objectForKey:@"Msg"];
                     break;
                 }
             }
@@ -210,7 +210,7 @@
                 break;
             }
             
-            resultData = [responseJSON objectForKey:@"data"];
+            resultData = [responseJSON objectForKey:@"Data"];
         }while (0);
         
         [self reportRestult:completedOperation bValuedJSON:bValidJSON errorMsg:errorMsg resultData:resultData];

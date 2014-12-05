@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface SelectCity : UITableViewController
+{
+    NSMutableArray * _Cities;
+}
+
+@property (nonatomic,retain) UIButton* TitleButton;
+@property (nonatomic, retain) NSString* Title;
+
 
 @end

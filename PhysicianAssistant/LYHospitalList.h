@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LYHospitalList : UITableViewController
-
+@property (nonatomic,retain) NSString* Title;
 @end

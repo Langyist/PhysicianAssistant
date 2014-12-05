@@ -159,7 +159,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="w7D-Qe-y2y">
-                        <nil key="title"/>
+                        <barButtonItem key="backBarButtonItem" title="返回" id="yK1-dx-Xx2"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hGb-BE-kTE">
                             <rect key="frame" x="277" y="7" width="46" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

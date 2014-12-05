@@ -53,7 +53,7 @@
     id city = [[NSUserDefaults standardUserDefaults] objectForKey:kLocalChoosCity];
     if (city == nil) {
         //初始化BMKLocationService
-        _locService = [[BMKLocationService alloc]init];
+        _locService = [[BMKLocationService alloc] init];
         _locService.delegate = self;
         //启动LocationService
         [_locService startUserLocationService];
@@ -64,11 +64,13 @@
 
 -(void)UpdateUI{
     id city = [[NSUserDefaults standardUserDefaults] objectForKey:kLocalChoosCity];
-    [self.tabBarItem setTitle:city];
+    [UIView setAnimationsEnabled:NO];
+    [self.titleBar setTitle:city forState:UIControlStateNormal];
+    [self.titleBar layoutIfNeeded];
+    [UIView setAnimationsEnabled:YES];
+    
     [self.tableView reloadData];
 }
-
-
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

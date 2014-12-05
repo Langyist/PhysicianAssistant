@@ -7,6 +7,8 @@
 //
 
 #import "LYLoginVC.h"
+#import "StoreOnlineNetworkEngine.h"
+#import "CommonDefine.h"
 
 @interface LYLoginVC () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
@@ -68,6 +70,20 @@
         [self.passwordText resignFirstResponder];
     }
     return YES;
+}
+
+- (void)GetLoginData {
+    NSDictionary *dic = @{@"act" :@"list",
+                    @"LoginName" :self.passwordText.text,
+                           @"Psd":self.userText.text,
+                      };
+    [[StoreOnlineNetworkEngine shareInstance] startNetWorkWithPath:kIp
+                                                            params:dic
+                                                            repeat:YES
+                                                             isGet:YES
+                                                       resultBlock:^(BOOL bValidJSON, NSString *errorMsg, id result) {
+        
+    }];
 }
 
 @end

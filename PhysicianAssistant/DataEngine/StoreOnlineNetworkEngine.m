@@ -9,6 +9,7 @@
 #import "StoreOnlineNetworkEngine.h"
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "CommonDefine.h"
 
 @interface StoreOnlineNetworkEngine () {
     NSMutableDictionary *operationNetworkArray;
@@ -33,7 +34,7 @@
 + (StoreOnlineNetworkEngine *)shareInstance {
     static StoreOnlineNetworkEngine *instance = nil;
     if (instance == nil) {
-        instance = [[StoreOnlineNetworkEngine alloc] initWithHostName:@"192.168.1.242"];
+        instance = [[StoreOnlineNetworkEngine alloc] initWithHostName:kIp];
     }
     return instance;
 }

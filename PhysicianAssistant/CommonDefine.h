@@ -8,9 +8,15 @@
 //  通用的关键字的定义
 
 #pragma mark - -- NSUserDefaults Key --
-
 #define kLocalChoosCity                         @"kLocalChoosCity"
 #define kLocalChoosHospital                     @"kLocalChoosHospital"
+
+
+#pragma mark - -- network url --
+#define kIp                                     @"192.168.1.242"
+#define kUrlCityList                            @"hospital/hospital.ashx"
+
+
 
 
 #pragma mark - -- NSNotificationCenter Key --

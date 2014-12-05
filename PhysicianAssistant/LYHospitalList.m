@@ -12,6 +12,7 @@
 #import "SelectCity.h"
 #import "CommonDefine.h"
 
+
 @interface LYHospitalList ()<BMKLocationServiceDelegate>{
     UISearchBar *searchBar;
     NSMutableArray* _HospitalList;
@@ -128,7 +129,7 @@
                           @"PageSize": @"10",
                           @"PageIndex": @"1"};
     
-    [[StoreOnlineNetworkEngine shareInstance] startNetWorkWithPath:@"hospital/hospital.ashx"
+    [[StoreOnlineNetworkEngine shareInstance] startNetWorkWithPath:kUrlCityList
                                                             params:dic
                                                             repeat:YES
                                                              isGet:YES

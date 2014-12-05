@@ -38,6 +38,10 @@
 - (IBAction)signupButton:(id)sender {
     [self performSegueWithIdentifier:@"GoGetcedeVC" sender:self];
 }
+
+
+
+
 //医生助手服务协议
 - (IBAction)AgreementButton:(id)sender {
 }

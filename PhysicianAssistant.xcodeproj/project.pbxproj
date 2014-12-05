@@ -156,8 +156,8 @@
 		ADB3BAF71A30402700BBC80F /* 小区交流.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "小区交流.png"; sourceTree = "<group>"; };
 		ADB3BAF81A30402700BBC80F /* ic_share_to_friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_share_to_friends.png; sourceTree = "<group>"; };
 		ADB9AEFE1A314A540071DC43 /* 便民.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "便民.png"; sourceTree = "<group>"; };
-		EF2F1B1E1A2C8B190048997F /* StoreOnlineNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreOnlineNetworkEngine.h; sourceTree = "<group>"; };
-		EF2F1B1F1A2C8B190048997F /* StoreOnlineNetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreOnlineNetworkEngine.m; sourceTree = "<group>"; };
+		EF2F1B1E1A2C8B190048997F /* StoreOnlineNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoreOnlineNetworkEngine.h; path = DataEngine/StoreOnlineNetworkEngine.h; sourceTree = "<group>"; };
+		EF2F1B1F1A2C8B190048997F /* StoreOnlineNetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoreOnlineNetworkEngine.m; path = DataEngine/StoreOnlineNetworkEngine.m; sourceTree = "<group>"; };
 		EF5EC5451A2C7F3200C9D980 /* PhysicianAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhysicianAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5EC5491A2C7F3200C9D980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF5EC54A1A2C7F3200C9D980 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -339,17 +339,10 @@
 			children = (
 				ADAF3CD11A316076008134A4 /* CommonDefault.h */,
 				ADAF3CD21A316076008134A4 /* CommonDefine.h */,
-			);
-			name = Supports;
-			sourceTree = "<group>";
-		};
-		EF2F1B1D1A2C8B190048997F /* DataEngine */ = {
-			isa = PBXGroup;
-			children = (
 				EF2F1B1E1A2C8B190048997F /* StoreOnlineNetworkEngine.h */,
 				EF2F1B1F1A2C8B190048997F /* StoreOnlineNetworkEngine.m */,
 			);
-			path = DataEngine;
+			name = Supports;
 			sourceTree = "<group>";
 		};
 		EF5EC53C1A2C7F3100C9D980 = {
@@ -380,17 +373,16 @@
 				ADAF3CD01A31602B008134A4 /* Supports */,
 				AD943B9A1A2DA97600F32359 /* image */,
 				AD943B9F1A2DA97600F32359 /* login */,
-				EF2F1B1D1A2C8B190048997F /* DataEngine */,
 				EF5EC54C1A2C7F3200C9D980 /* AppDelegate.h */,
 				EF5EC54D1A2C7F3200C9D980 /* AppDelegate.m */,
 				EF5EC54F1A2C7F3200C9D980 /* ViewController.h */,
 				EF5EC5501A2C7F3200C9D980 /* ViewController.m */,
 				AD8D56C51A2DAFCB00D81DBA /* SelectCity.h */,
+				AD8D56C61A2DAFCB00D81DBA /* SelectCity.mm */,
 				AD8D56BF1A2DAEDB00D81DBA /* LYHospitalList.h */,
 				AD8D56C01A2DAEDB00D81DBA /* LYHospitalList.m */,
 				ADB3BAF01A303E3600BBC80F /* LYMainVC.h */,
 				ADB3BAF11A303E3600BBC80F /* LYMainVC.m */,
-				AD8D56C61A2DAFCB00D81DBA /* SelectCity.mm */,
 				EF5EC5521A2C7F3300C9D980 /* Main.storyboard */,
 				EF5EC5551A2C7F3300C9D980 /* Images.xcassets */,
 				EF5EC5571A2C7F3300C9D980 /* LaunchScreen.xib */,

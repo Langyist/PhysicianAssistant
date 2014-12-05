@@ -76,7 +76,7 @@
 
 -(void)GetData{
     NSDictionary *dic = @{@"act" :@"citylist"};
-    [[StoreOnlineNetworkEngine shareInstance] startNetWorkWithPath:@"hospital/hospital.ashx"
+    [[StoreOnlineNetworkEngine shareInstance] startNetWorkWithPath:kUrlCityList
                                                             params:dic
                                                             repeat:YES
                                                              isGet:YES

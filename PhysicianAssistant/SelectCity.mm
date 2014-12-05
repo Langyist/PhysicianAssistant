@@ -8,6 +8,7 @@
 
 #import "SelectCity.h"
 #import "StoreOnlineNetworkEngine.h"
+#import "CommonDefine.h"
 
 @interface SelectCity (){
     
@@ -63,6 +64,14 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     _Section =[_Cities objectAtIndex:section];
     return [_Section objectForKey:@"CityPy"];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    _Section =[_Cities objectAtIndex:indexPath.section];
+    _CellList = [_Section objectForKey:@"Items"];
+    _CellInfor = [_CellList objectAtIndex:indexPath.row];
+    [[NSUserDefaults standardUserDefaults] setObject:[_CellInfor objectForKey:@"Name"] forKey:kLocalChoosCity];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)GetData{

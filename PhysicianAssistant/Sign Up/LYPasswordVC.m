@@ -7,10 +7,13 @@
 //
 
 #import "LYPasswordVC.h"
+#import "StoreOnlineNetworkEngine.h"
+#import "CommonDefine.h"
 
 @interface LYPasswordVC () <UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate> {
     
-    NSArray *pickerArray;
+    NSMutableArray *pickerArray;
+    NSDictionary *pickerdic;
     BOOL showMnue;
 }
 @property (weak, nonatomic) IBOutlet UITextField *passwordText;
@@ -42,15 +45,13 @@
     self.pickerView.hidden = YES;
     
     self.ViewButton.layer.cornerRadius = 5.0f;
-    self.pickerViewLabel.text = @"科室";
     
-    
-    pickerArray = [[NSArray alloc] initWithObjects:@"科室",@"外科",@"内科",@"医学科",@"脑壳",@"儿科",@"妇科",@"妇产科",@"科室",@"外科",@"内科",@"医学科",@"脑壳",@"儿科",@"妇科",@"妇产科",nil];
     self.pickerView.hidden = YES;
     
     UITapGestureRecognizer *Gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboard)];
     [self.view addGestureRecognizer:Gesture];
-
+    
+    [self getDepartments];
 }
 - (IBAction)mnueButton:(id)sender {
     if (showMnue) {
@@ -74,6 +75,37 @@
     if (self.passwordText.text != self.thirdText.text) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"两次输入密码不相同！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:@"取消", nil];
         [alert show];
+    }
+}
+
+-(void)getDepartments{
+    
+    id hospitalDic = [[NSUserDefaults standardUserDefaults] objectForKey:kLocalChoosHospital];
+    NSString* hid = [hospitalDic objectForKey:@"HID"];
+    NSString* name = [hospitalDic objectForKey:@"HName"];
+    NSDictionary *dic = @{@"act" :@"list",@"HID":hid,@"DName":name};
+    [[StoreOnlineNetworkEngine shareInstance] startNetWorkWithPath:kTechnicalOffices
+                                                            params:dic
+                                                            repeat:YES
+                                                             isGet:YES
+                                                       resultBlock:^(BOOL bValidJSON, NSString *errorMsg, id result) {
+                                                           if(!bValidJSON)
+                                                           {
+                                                               UIAlertView * mslaView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"" delegate:errorMsg cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                                                               [mslaView show];
+                                                           }else
+                                                           {
+                                                               pickerArray = result;
+                                                               [self UpdateUI];
+                                                           }}];
+}
+
+-(void)UpdateUI{
+    if(pickerArray.count > 0){
+        [self.pickerView reloadAllComponents];
+        [self.pickerView selectedRowInComponent:0];
+        pickerdic = [pickerArray objectAtIndex:0];
+        self.pickerViewLabel.text = [pickerdic objectForKey:@"DName"];
     }
 }
 
@@ -102,13 +134,15 @@
 }
 
 -(NSString*) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    return [pickerArray objectAtIndex:row];
+    pickerdic = [pickerArray objectAtIndex:row];
+    return [pickerdic objectForKey:@"DName"];
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     
     NSInteger index = [self.pickerView selectedRowInComponent:0];
-    self.pickerViewLabel.text = [pickerArray objectAtIndex:index];
+    pickerdic = [pickerArray objectAtIndex:index];
+    self.pickerViewLabel.text = [pickerdic objectForKey:@"DName"];
 }
 
 @end

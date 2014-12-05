@@ -7,6 +7,7 @@
 //
 
 #import "LYSignupVC.h"
+#import "CommonDefine.h"
 
 @interface LYSignupVC () <UITextFieldDelegate> {
     
@@ -36,7 +37,15 @@
 }
 //注册button
 - (IBAction)signupButton:(id)sender {
-    [self performSegueWithIdentifier:@"GoGetcedeVC" sender:self];
+    NSString* text = self.phoneText.text;
+    if (text != nil && text.length > 0) {
+        [[NSUserDefaults standardUserDefaults] setObject:[self.phoneText text] forKey:kLocalPhoneNumber];
+        [self performSegueWithIdentifier:@"GoGetcedeVC" sender:self];
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"电话号码不能为空" delegate:nil cancelButtonTitle:@"返回" otherButtonTitles:@"确认", nil];
+        [alert show];
+    }
+    
 }
 
 

@@ -110,6 +110,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    //先保存医院数据
+    NSDictionary *HospitalDic = [_HospitalList objectAtIndex:indexPath.row];
+    NSLog(@"%@",HospitalDic);
+    [[NSUserDefaults standardUserDefaults] setObject:HospitalDic forKey:kLocalChoosHospital];
+    
+    
+    
     [self performSegueWithIdentifier:@"GoLoginVC" sender:self];
 }
 

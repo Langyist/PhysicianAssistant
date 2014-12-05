@@ -2,8 +2,8 @@
 //  CommonDefault.h
 //  resourcenet
 //
-//  Created by hujing on 14/11/30.
-//  Copyright (c) 2014年 wonderfun. All rights reserved.
+//  Created
+//  Copyright (c) 2014年 wangliang. All rights reserved.
 //
 //  通用的默认值的定义
 

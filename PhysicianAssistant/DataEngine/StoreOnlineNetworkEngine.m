@@ -14,8 +14,7 @@
 @interface StoreOnlineNetworkEngine () {
     NSMutableDictionary *operationNetworkArray;
     MKNetworkOperation *waitingOperation;
-    
-    UIActivityIndicatorView *activityView;
+        UIActivityIndicatorView *activityView;
     UILabel *label;
     UIControl *overlayView;
 }
